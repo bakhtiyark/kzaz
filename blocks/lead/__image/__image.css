@@ -1,0 +1,23 @@
+.lead__image{
+margin: 64px 0 0;
+background-image: url("../../../images/lead-platzkart.png");
+background-repeat: no-repeat;
+background-size: contain;
+max-width:100%;
+}
+
+@media screen and (max-width: 1279px) {
+    .lead__image {
+        margin: 56px 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .lead__image {
+        margin: 40px 0 0;
+    }
+}
+@media screen and (max-width: 319px) {
+    .lead__image {
+        margin: 40px 0 0;
+    }}

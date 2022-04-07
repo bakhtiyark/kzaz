@@ -1,0 +1,17 @@
+.website__link{
+    margin: 0;
+    padding: 0;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 1.22;
+/* identical to box height, or 122% */
+padding-top: 12px;
+text-decoration-line: underline;
+
+color: #FFFFFF;
+}
+.website__link:hover{
+    opacity: 0.8;
+}
+
