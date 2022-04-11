@@ -1,0 +1,67 @@
+.ammonia{
+    background-color: rgb(11, 23, 40);
+    box-sizing: border-box;
+    margin:0 auto;
+    font-family: 'Inter';
+    color: #fff;
+    max-width: 1280px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+.ammonia-grid{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    max-width: 1184px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    gap: 16px;
+
+}
+
+.ammonia-grid__item{
+    padding:15px;
+    width: 350px;
+    height: 213px;
+    display: block;
+    border: #fff;
+    border-style: solid;
+    border-width: 1px;
+}
+.ammonia-list{
+    font-size: small;
+    line-height: 95%;
+}
+.ammonia-vendor-list{
+    margin-top: 15px;
+    font-size: normal;
+    line-height: 119%;
+    font-weight: 600;
+}
+.ammomarg{
+    margin-bottom: 50px;
+}
+
+.place__ammo{
+    display: grid;
+    grid-template-columns: min-content minmax(min-content, 1fr);
+    grid-template-rows: minmax(min-content, max-content) 1fr;
+    grid-template-areas: 
+        "ar-title ar-website"
+        "ar-image ar-text";
+    max-width: 100%;
+    row-gap: 48px;
+    column-gap: 40px;
+    margin:100px 0 100px 0;
+}
+
+.arrow{
+    color:#fff;
+    fill: #fff;
+ }

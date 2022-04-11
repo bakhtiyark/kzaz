@@ -280,8 +280,15 @@ function urea(form) {
     form.ureaTotal.value = calculate(parseFloat(form.pcosts.value) + parseFloat(form.ocosts.value) + parseFloat(form.ureaSubtot.value));
 }
 function an(form) {
-    if (form.aprice.value.indexOf(',') != -1) {
-        form.aprice.value = form.aprice.value.replace(regexp, erstatt);
+    if (form.stand.value === `1`) {
+        gost = 1;
+    } 
+    
+    if (form.stand.value === `0`) {
+        gost = 0;
+    }     
+    if (form.use.value.indexOf(',') != -1) {
+        form.use.value = form.use.value.replace(regexp, erstatt);
     }
     if (form.use.value.indexOf(',') != -1) {
         form.use.value = form.use.value.replace(regexp, erstatt);
@@ -293,7 +300,15 @@ function an(form) {
     var resourceConsumption = 0.110
     var productionCost = calculate(parseFloat(form.aprice.value) * resourceConsumption);
 
-    form.anTotal.value = calculate(parseFloat(productionCost) + parseFloat(form.ocosts.value) + parseFloat(form.anSubtot.value));
+    if (gost === 1) {
+        var precalc = calculate(parseFloat(productionCost) + parseFloat(form.ocosts.value) + parseFloat(form.anSubtot.value));
+        form.anTotal.value = precalc + 3 * (precalc/100)
+    }
+    else {
+        form.anTotal.value = calculate(parseFloat(productionCost) + parseFloat(form.ocosts.value) + parseFloat(form.anSubtot.value));
+    }
+
+    
 }
 
 function clear1() {
