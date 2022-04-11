@@ -283,7 +283,6 @@ function an(form) {
     if (form.stand.value === `1`) {
         gost = 1;
     } 
-    
     if (form.stand.value === `0`) {
         gost = 0;
     }     
@@ -306,9 +305,7 @@ function an(form) {
     }
     else {
         form.anTotal.value = calculate(parseFloat(productionCost) + parseFloat(form.ocosts.value) + parseFloat(form.anSubtot.value));
-    }
-
-    
+    }   
 }
 
 function clear1() {
