@@ -8,7 +8,7 @@ var calcVal = {
     can: 0.27,
     sm3x: 0.0379,
     mmbtuX: 26.37,
-    as:0.21
+    as: 0.21
 };
 var labels = {
     sm3X: document.querySelector("[data-calc='sm3X']"),
@@ -282,10 +282,10 @@ function urea(form) {
 function an(form) {
     if (form.stand.value === `1`) {
         gost = 1;
-    } 
+    }
     if (form.stand.value === `0`) {
         gost = 0;
-    }     
+    }
     if (form.use.value.indexOf(',') != -1) {
         form.use.value = form.use.value.replace(regexp, erstatt);
     }
@@ -301,11 +301,11 @@ function an(form) {
 
     if (gost === 1) {
         var precalc = calculate(parseFloat(productionCost) + parseFloat(form.ocosts.value) + parseFloat(form.anSubtot.value));
-        form.anTotal.value = precalc + 3 * (precalc/100)
+        form.anTotal.value = precalc + 3 * (precalc / 100)
     }
     else {
         form.anTotal.value = calculate(parseFloat(productionCost) + parseFloat(form.ocosts.value) + parseFloat(form.anSubtot.value));
-    }   
+    }
 }
 
 function clear1() {
